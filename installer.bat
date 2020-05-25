@@ -46,6 +46,7 @@ goto cleanup
 
 :cleanup
 rmdir /Q /S ..\Installer\Files\mods
+rmdir /Q /S ..\Installer\Files\options\
 del /f /q "..\Installer\Files\servers.dat"
 
 
