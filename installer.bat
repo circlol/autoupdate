@@ -6,7 +6,8 @@ color f5
 title Starting Installation
 rmdir /Q /S ..\Installer\Files\mods
 cls
-set /p choice=Do you already have minecraft forge installed for 1.15.2? (y/n) : 
+set /p choice="Do you already have minecraft forge installed for 1.15.2? (y/n) : "
+if '%choice%'=="" (Echo Please do not leave the text field blank. Try again.) & (goto start)
 if '%choice%'=='y' goto freshinstall
 if '%choice%'=='Y' goto freshinstall
 if '%choice%'=='n' goto forge
