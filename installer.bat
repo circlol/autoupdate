@@ -2,17 +2,6 @@
 title Mike's EZ Installer
 color f5
 
-:installgit
-title Installing Prerequisites
-echo Installing Prerequisites
-echo -----------------------------------------
-Echo Installing Git...
-IF EXIST "C:\Program Files\Git\git-bash.exe" (goto start) ELSE ("..\Installer\Files\setup files\Git-2.26.2-64-bit.exe" /VERYSILENT /NORESTART /NOCANCEL /SP- /CLOSEAPPLICATIONS /RESTARTAPPLICATIONS /COMPONENTS="icons,ext\reg\shellhere")
-Echo Installation Complete..
-Echo Installing Java Runtime Environment...
-IF EXIST "C:\Program Files\AdoptOpenJDK\jre-8.0.252.09-hotspot\release" (goto start) ELSE ("..\Installer\Files\setup files\Latest Java Version.exe")
-cls
-
 :start
 title Starting Installation
 rmdir /Q /S ..\Installer\Files\mods
