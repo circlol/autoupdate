@@ -76,6 +76,8 @@ goto cleanup
 :cleanup
 rmdir /Q /S ..\Installer\Files\mods
 rmdir /Q /S ..\Installer\Files\updates
+del /f /q "..\Installer\Files\Installer.bat"
+del /f /q "..\Installer\Files\servers.dat"
 
 
 :succeeded
