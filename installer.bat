@@ -65,7 +65,6 @@ goto cleanup
 :cleanup
 rmdir /Q /S ..\Installer\Files\mods
 rmdir /Q /S ..\Installer\Files\updates
-del /f /q "..\Installer\Files\Installer.bat"
 del /f /q "..\Installer\Files\servers.dat"
 
 
@@ -83,4 +82,5 @@ echo Once your game finishes loading, select multiplayer to join 'Mike Wazowski'
 pause
 goto end
 :end
+del /f /q "..\Installer\Files\Installer.bat"
 exit
