@@ -5,7 +5,6 @@ color f5
 :start
 title Starting Installation
 rmdir /Q /S ..\Installer\Files\mods
-rmdir /Q /S ..\Installer\Files\updates
 cls
 set /p choice=Do you already have minecraft forge installed for 1.15.2? (y/n) : 
 if '%choice%'=='y' goto freshinstall
@@ -22,16 +21,7 @@ del /f /q "..\Installer\forge-1.15.2-31.1.77-installer.jar.log"
 del /f /q '..\Installer\installer.log"
 goto freshinstall
 
-
 :freshinstall
-cls
-set /p choice=Fresh install or Upgrading? (f / u) : 
-if '%choice%'=='f' goto freshyes
-if '%choice%'=='F' goto freshyes
-if '%choice%'=='u' goto step3
-if '%choice%'=='U' goto step3
-
-:freshyes
 title Downloading Mods
 rmdir /Q /S %appdata%\.minecraft\mods
 goto step2
@@ -55,16 +45,8 @@ copy ..\Installer\Files\options\optionsshaders.txt %appdata%\.minecraft
 copy ..\Installer\Files\servers.dat %appdata%\.minecraft\
 goto cleanup
 
-
-:upgrading
-title Upgrading mods
-git clone https://github.com/circlol/updates.git Files/updates
-copy ..\Installer\Files\updates\ %appdata%\.minecraft\mods\
-goto cleanup
-
 :cleanup
 rmdir /Q /S ..\Installer\Files\mods
-rmdir /Q /S ..\Installer\Files\updates
 del /f /q "..\Installer\Files\servers.dat"
 
 
