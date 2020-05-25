@@ -30,7 +30,6 @@ goto step2
 git clone https://github.com/circlol/mods.git Files/mods
 del ..\Installer\Files\mods\.gitattributes
 del ..\Installer\Files\mods\README.md
-git clone https://github.com/circlol/updates.git Files/updates
 title Installing mods
 mkdir %appdata%\.minecraft\mods\
 copy /y ..\Installer\Files\mods\ %appdata%\.minecraft\mods\
